@@ -78,7 +78,7 @@ int main()
 		cin >> dcs2;
 	}
 	}
-	while (dcs2!='n' && dcs2=='y');
+	while (dcs2!='n' && dcs2!='N' && dcs2=='y' && dcs2=='Y');
 	return 0;
 }
 
