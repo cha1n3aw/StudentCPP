@@ -14,21 +14,27 @@ void wrong_input()
 	cin.ignore(9999999, '\n');
 }
 
+float readNum()
+{
+    float f;
+    cin>>f;
+    while(cin.fail())
+    {
+        wrong_input();
+        cin>>f;
+
+    }
+    cin.ignore(9999999,'\n');
+    return f;
+}
+
 int main()
 {
 	do {
 	cout << " Hello, honey! What are the numbers? \n First number:";
-	cin >> a;
-	while (cin.fail()) {
-		wrong_input();
-		cin >> a;
-	}
+	a=readNum();
 	cout << " Second number:";
-	cin >> b;
-	while (cin.fail()) {
-		wrong_input();
-		cin >> b;
-	}
+	b=readNum();
 	cout << "\n What do you want to do, honey? \n 1. + \n 2. - \n 3. * \n 4. / \n 5. Second degree \n 6. Square root \n 7. Logarithm \n Your choice:";
 	cin >> dcs;
 	while (cin.fail() || dcs < 1 || dcs>7) {
